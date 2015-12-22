@@ -1,7 +1,17 @@
 doctype html
-html
+html(lang='en', ng-app='mahaB')
   head
     title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1, user-scalable=no')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js')
+    script(src='//cdn.socket.io/socket.io-1.2.0.js')
+    script(src='javascripts/app.js')
+    script(src='javascripts/controller.js')
   body
-    block content
+    div.container
+      div(ng-view)
